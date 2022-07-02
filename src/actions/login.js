@@ -1,8 +1,8 @@
 import LOGIN from '.';
 
-const loginWallet = (email) => ({
+const saveEmail = (email) => ({
   type: LOGIN,
   payload: email,
 });
 
-export default loginWallet;
+export default saveEmail;

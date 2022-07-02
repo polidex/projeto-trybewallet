@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import loginWallet from '../actions/login';
+import saveEmail from '../actions/login';
 
 class Login extends React.Component {
   state = {
@@ -35,7 +35,7 @@ class Login extends React.Component {
   handleClick = () => {
     const { history, dispatch } = this.props;
     const { email } = this.state;
-    dispatch(loginWallet(email));
+    dispatch(saveEmail(email));
     history.push('/carteira');
   }
 
