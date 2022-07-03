@@ -1,3 +1,5 @@
 const LOGIN = 'LOGIN';
+const FETCH_SUCCESS = 'FETCH_SUCCESS';
+const FETCH_ERR = 'FETCH_ERR';
 
-export default LOGIN;
+export { LOGIN, FETCH_SUCCESS, FETCH_ERR };

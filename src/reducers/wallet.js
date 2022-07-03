@@ -1,27 +1,22 @@
+import { FETCH_SUCCESS } from '../actions';
+
 const initialState = {
-  wallet: {
-    currencies: [],
-    expenses: [],
-    editor: false,
-    idToEdit: 0,
-  },
+  currencies: [],
+  expenses: [],
+  editor: false,
+  idToEdit: 0,
 };
 
-const saveWallet = (state = initialState, action) => {
+const wallet = (state = initialState, action) => {
   switch (action.type) {
-  // case xablau:
-  //   return {
-  //     ...state,
-  //     wallet: {
-  //       currencies: [],
-  //       expenses: [],
-  //       editor: false,
-  //       idToEdit: 0,
-  //     },
-  //   };
+  case FETCH_SUCCESS:
+    return {
+      ...state,
+      currencies: [...action.payload],
+    };
   default:
     return state;
   }
 };
 
-export default saveWallet;
+export default wallet;
