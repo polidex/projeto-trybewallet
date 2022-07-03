@@ -70,12 +70,12 @@ class Login extends React.Component {
         >
           Entrar
         </button>
-        <button
+        {/* <button
           type="button"
           onClick={ () => console.log('oi!') }
         >
           Teste
-        </button>
+        </button> */}
       </div>
     );
   }
