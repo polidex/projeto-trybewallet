@@ -2,9 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import getUpdatedCurrencies from '../actions/expenses';
-import Form from './Form';
-import Header from './Header';
-import Table from './Table';
+import Form from '../components/Form';
+import Header from '../components/Header';
+import Table from '../components/Table';
 
 const initialState = {
   value: '0',
@@ -60,11 +60,6 @@ class Wallet extends React.Component {
     );
   }
 }
-const mapStateToProps = (state) => ({
-  user: state.user,
-  expenses: state.wallet.expenses,
-  currencies: state.wallet.currencies,
-});
 
 const mapDispatchToProps = (dispatch) => ({
   getExpensesFetch: (state) => dispatch(getUpdatedCurrencies(state)),
@@ -74,4 +69,4 @@ Wallet.propTypes = {
   getExpensesFetch: PropTypes.func.isRequired,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Wallet);
+export default connect(null, mapDispatchToProps)(Wallet);
